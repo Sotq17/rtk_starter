@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    ["@babel/preset-env", {
+      "targets": {
+          "ie": 11,
+          "safari": 9
+      },
+      "useBuiltIns": "usage",
+      "corejs": 3
+    }]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        [
+          "babel-plugin-styled-components", {
+            "minify": false
+          },
+          "react-hot-loader/babel"
+        ]
+      ]
+    }
+  }
+}
