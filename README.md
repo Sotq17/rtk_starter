@@ -52,6 +52,8 @@ reduxjs/toolkit v1.3.6
         │   └── top
         │       ├── Top.tsx
         │       └── topSlice.ts
+        ├── utils
+        │   └── constants.ts(定数をまとめておく)
         ├── index.tsx (エントリーポイント / routingを管理)
         └── stores (それぞれのSliceを呼び出し、configureStoreで結合する)
             └── index.ts

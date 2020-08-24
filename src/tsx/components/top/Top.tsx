@@ -1,10 +1,11 @@
-/** @jsx jsx */
-// import React from 'react'
+// /** @jsx jsx */
+import { jsx, css } from '@emotion/core'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectUser, logout } from '../login/loginSlice'
 
 import { BrowserRouter as Router, useHistory } from 'react-router-dom'
-import { jsx, css } from '@emotion/core'
+
 import TopList from './TopList'
 
 import { hot } from 'react-hot-loader'

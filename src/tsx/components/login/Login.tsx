@@ -1,5 +1,6 @@
-// ユーザー/パスワードを入力してAPI通信後のページ遷移を想定
-// * 現在APIはないので何を送っても200になる
+// emotionを使うときはReactをimportする前に/** @jsx jsx */をつけてインポート
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core'
 
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -14,6 +15,10 @@ import {
 import { BrowserRouter as Router, useHistory } from 'react-router-dom'
 import { hot } from 'react-hot-loader'
 
+import { media_pc, media_pc_l } from '../../utils/constants'
+
+// ユーザー/パスワードを入力してAPI通信後のページ遷移を想定
+// * 現在APIはないので何を送っても200になる
 const login = () => {
   // 一時的な保持はuseStateを使い各コンポーネントで行う
   const [userName, setUserName] = useState('')
@@ -50,9 +55,7 @@ const login = () => {
 
   return (
     <div>
-      <h1>Login Page</h1>
-
-      <p>{user.auth.username}</p>
+      <h1 css={title}>Login Page</h1>
 
       <form onSubmit={handleSubmit}>
         <input
@@ -74,5 +77,12 @@ const login = () => {
     </div>
   )
 }
+
+const title = css({
+  color: 'pink',
+  `@media(min-width: ${media_pc}px)`: {
+    color: 'orange'
+  }
+})
 
 export default hot(module)(login)
