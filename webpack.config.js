@@ -31,7 +31,24 @@ module.exports = (env, options) => ({
         test: /\.ts[x]?/,
         exclude: /node_modules/,
         use: {
-          loader: 'ts-loader'
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+            cacheCompression: true,
+            babelrc: false,
+            sourceType: 'unambiguous',
+            presets: [
+              ['@babel/preset-env', { useBuiltIns: 'usage', corejs: 3 }],
+              '@babel/preset-typescript',
+              '@babel/preset-react',
+              '@emotion/babel-preset-css-prop'
+            ],
+            plugins: [
+              '@babel/plugin-syntax-dynamic-import',
+              '@babel/plugin-proposal-class-properties',
+              '@babel/plugin-syntax-object-rest-spread'
+            ]
+          }
         }
       },
       {

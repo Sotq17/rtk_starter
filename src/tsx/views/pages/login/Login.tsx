@@ -1,8 +1,5 @@
-// emotionを使うときはReactをimportする前に/** @jsx jsx */をつけてインポート
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
-
 import React, { useState, useEffect } from 'react'
+import { css } from '@emotion/core'
 import { useDispatch, useSelector } from 'react-redux'
 // sliceから使用するactionをimport
 import {
@@ -10,12 +7,12 @@ import {
   editPassword,
   fetchAsyncLogin,
   selectUser
-} from './loginSlice'
+} from '../../../stores/slices/userSlice'
 
 import { BrowserRouter as Router, useHistory } from 'react-router-dom'
 import { hot } from 'react-hot-loader'
 
-import { media_pc, media_pc_l } from '../../utils/constants'
+import { media_pc, media_pc_l } from '../../../style/variables'
 
 // ユーザー/パスワードを入力してAPI通信後のページ遷移を想定
 // * 現在APIはないので何を送っても200になる
@@ -78,11 +75,14 @@ const login = () => {
   )
 }
 
-const title = css({
-  color: 'pink',
-  `@media(min-width: ${media_pc}px)`: {
-    color: 'orange'
+const title = css`
+  color: pink;
+  ${media_pc} {
+    color: blue;
   }
-})
+  ${media_pc_l} {
+    color: red;
+  }
+`
 
 export default hot(module)(login)

@@ -1,14 +1,14 @@
-// /** @jsx jsx */
-import { jsx, css } from '@emotion/core'
 import React from 'react'
+import { css } from '@emotion/core'
 import { useDispatch, useSelector } from 'react-redux'
-import { selectUser, logout } from '../login/loginSlice'
+import { selectUser, logout } from '../../../stores/slices/userSlice'
 
 import { BrowserRouter as Router, useHistory } from 'react-router-dom'
 
 import TopList from './TopList'
 
 import { hot } from 'react-hot-loader'
+import { title } from '../../../style/pages/Top'
 
 function Top() {
   const dispatch = useDispatch()
@@ -38,11 +38,3 @@ function Top() {
 }
 
 export default hot(module)(Top)
-
-// emotion (css-in-Js)
-const title = css({
-  color: 'pink',
-  '&:hover': {
-    color: 'red'
-  }
-})

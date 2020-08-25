@@ -1,10 +1,11 @@
 import * as React from 'react'
 import { Global, css } from '@emotion/core'
+import { textClr } from '../style/variables'
 
 // グローバルCSS
 const globalStyle = css`
   body {
-    color: blue;
+    color: ${textClr};
   }
 `
 
