@@ -1,11 +1,16 @@
 import * as React from 'react'
 import { Global, css } from '@emotion/core'
 import { textClr } from '../style/variables'
+import { reset } from './resetStyle'
 
-// グローバルCSS
+// grobal-css
 const globalStyle = css`
+  ${reset}
   body {
     color: ${textClr};
+  }
+  button {
+    outline: none;
   }
 `
 

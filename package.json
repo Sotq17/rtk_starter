@@ -39,6 +39,7 @@
     "pug-loader": "^2.4.0",
     "react-hot-loader": "^4.12.21",
     "react-router-dom": "^5.2.0",
+    "react-scroll": "^1.8.1",
     "ts-loader": "^8.0.2",
     "ts-migrate": "^0.1.0",
     "typescript": "^3.9.7",
@@ -53,11 +54,9 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
     "@types/react-router-dom": "^5.1.5",
-    "@types/styled-components": "^5.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "react-redux": "^7.2.0",
-    "styled-components": "^5.1.1"
+    "react-redux": "^7.2.0"
   }
 }

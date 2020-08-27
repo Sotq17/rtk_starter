@@ -1,7 +1,6 @@
 import { css } from '@emotion/core'
 
-// emotion (css-in-Js)
-export const title = css({
+export const TopTitle = css({
   color: 'pink',
   '&:hover': {
     color: 'red'

@@ -15,8 +15,8 @@ import Login from './views/pages/login/Login'
 // react-router-domでページ遷移
 ReactDOM.render(
   <Provider store={store}>
+    <GlobalStyle />
     <Router>
-      <GlobalStyle />
       <Switch>
         <Route path="/top" component={Top} />
         <Route path="/" component={Login} />

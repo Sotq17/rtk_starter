@@ -1,23 +1,27 @@
 import React, { useState, useEffect } from 'react'
-import { css } from '@emotion/core'
 import { useDispatch, useSelector } from 'react-redux'
-// sliceから使用するactionをimport
+
+// sliceから使用するaction
 import {
   editUsername,
   editPassword,
   fetchAsyncLogin,
   selectUser
 } from '../../../stores/slices/userSlice'
-
 import { BrowserRouter as Router, useHistory } from 'react-router-dom'
 import { hot } from 'react-hot-loader'
 
-import { media_pc, media_pc_l } from '../../../style/variables'
+// 使用するcomponent
+import Header from '../../components/block/Header'
+import Footer from '../../components/block/Footer'
+import { Button } from '../../components/atoms/Button'
 
-// ユーザー/パスワードを入力してAPI通信後のページ遷移を想定
-// * 現在APIはないので何を送っても200になる
-const login = () => {
-  // 一時的な保持はuseStateを使い各コンポーネントで行う
+// 使用するstyle
+import { LoginTitle } from '../../../style/pages/Login'
+import { themeClr } from '../../../style/variables'
+
+const Login = () => {
+  // 一時的な保持は各コンポーネントで行う
   const [userName, setUserName] = useState('')
   const [passWord, setPassWord] = useState('')
   const dispatch = useDispatch()
@@ -35,7 +39,7 @@ const login = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
-    // importしてきたactionをdispatchする
+    // importしたactionをdispatchする
     dispatch(editUsername(userName))
     dispatch(editPassword(passWord))
     dispatch(fetchAsyncLogin())
@@ -52,7 +56,8 @@ const login = () => {
 
   return (
     <div>
-      <h1 css={title}>Login Page</h1>
+      <Header />
+      <h1 css={LoginTitle}>Login Page</h1>
 
       <form onSubmit={handleSubmit}>
         <input
@@ -69,20 +74,16 @@ const login = () => {
           placeholder="pass"
         ></input>
 
-        <button onClick={handleSubmit}>LogIn</button>
+        <Button
+          onClick={handleSubmit}
+          name="LogIn"
+          color="#ffffff"
+          bgColor={themeClr}
+        />
       </form>
+      <Footer />
     </div>
   )
 }
 
-const title = css`
-  color: pink;
-  ${media_pc} {
-    color: blue;
-  }
-  ${media_pc_l} {
-    color: red;
-  }
-`
-
-export default hot(module)(login)
+export default hot(module)(Login)
