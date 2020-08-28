@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
+import {apiURL} from "../../utils/constants"
+ 
 
-
-const apiURL = 'https://jsonplaceholder.typicode.com/users'
 // 非同期はSliceの外に出してcreateAsyncThunkを使用する
 export const fetchAsyncLogin = createAsyncThunk('login/get', async () => {
   //  ログインAPIを叩く想定

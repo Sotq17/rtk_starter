@@ -1,4 +1,4 @@
-# react redux(redux toolkit)をサクッと使うための環境
+# react redux(redux toolkit)を使ったテンプレート
 
 ## 開発環境
 * node v12.13.1
@@ -33,28 +33,45 @@ reduxjs/toolkit v1.3.6
     ├── img (画像置き場)
     │   └── common
     │       └── favicon.png
-    ├── pug
-    │   ├── _partial
-    │   │   ├── _template.pug
-    │   │   ├── footer.pug
-    │   │   └── header.pug
-    │   └── index.pug (reactをrenderする場所)
-    ├── ts
-    │   └── app.ts (react外でjsを使用する時に使用)
+    ├── pug (render先を指定)
+    │   └── index.pug
+    ├── ts (react外でjsを使うときに使用)
+    │   └── app.ts
     ├── tsconfig.json
-    └── tsx (react用ディレクトリ)
-        ├── components （コンポーネント用ディレクトリ)
-        │   ├── login(コンポーネントごとにディレクトリを分ける)
-        │   │   ├── Login.tsx(呼び出されるreactファイル)
-        │   │   └── loginSlice.ts(各コンポーネントで使われるロジックをまとめる)
-        │   ├── styledComponent
-        │   │   └── GlobalStyle.tsx
-        │   └── top
-        │       ├── Top.tsx
-        │       └── topSlice.ts
-        ├── index.tsx (エントリーポイント / routingを管理)
-        └── stores (それぞれのSliceを呼び出し、configureStoreで結合する)
-            └── index.ts
+    └── tsx
+        ├── index.tsx (エントリーポイント)
+        ├── stores
+        │   ├── index.ts (slicesディレクトリで作られたSliceを結合する)
+        │   └── slices (このディレクトリ下で各sliceファイルを扱う)
+        │       └── userSlice.ts
+        ├── style（各page,componentのcssを切り分けたい時に使用)
+        │   ├── GlobalStyle.tsx
+        │   ├── components
+        │   │   ├── atoms
+        │   │   │   └── Button.tsx
+        │   │   └── block
+        │   │       ├── Footer.tsx
+        │   │       └── Header.tsx
+        │   ├── pages
+        │   │   ├── Login.tsx
+        │   │   └── Top.tsx
+        │   ├── resetStyle.tsx
+        │   └── variables.tsx
+        ├── utils(定数などを管理)
+        │   └── constants.tsx
+        └── views
+            ├── components（使い回しのできる要素）
+            │   ├── atoms(最小単位のcomponent)
+            │   │   └── Button.tsx
+            │   ├── block(atomsを組み合わせたり、atomsでは管理しきれないcomponent)
+            │   │   ├── Footer.tsx
+            │   │   └── Header.tsx
+            │   └── modules(機能を持ったcomponent)
+            │       └── ScrollTop.tsx
+            └── pages（各ページの呼び出し先）
+                ├── login
+                │   └── Login.tsx
+                └── top
+                    ├── Top.tsx
+                    └── TopList.tsx（そのページでしか使われないreact-componentは同階層に設置）
 ```
-
-*conponentsが増えすぎるのでpagesディレクトリとかを作ってpageごとにcomponentを呼び出す構成でも良いかも
