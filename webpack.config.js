@@ -6,7 +6,7 @@ module.exports = (env, options) => ({
   devtool: options.mode === 'development' ? 'source-map' : false,
   devServer: {
     contentBase: options.mode === 'development' ? './dist' : './build',
-    port: 3000,
+    port: 3001,
     host: '0.0.0.0',
     historyApiFallback: {
       rewrites: [{ from: /^\/$/, to: 'index.html' }]
