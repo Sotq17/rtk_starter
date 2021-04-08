@@ -1,29 +1,44 @@
-const imagemin = require('imagemin');
-const pngquant = require('imagemin-pngquant');
+const imagemin = require('imagemin')
+const pngquant = require('imagemin-pngquant')
 const imageminSvgo = require('imagemin-svgo')
 const imageminOpting = require('imagemin-optipng')
-const paths = require('./paths');
+const jpegtran = require('imagemin-jpegtran')
+const util = require('util')
+const path = require('path')
+const fs = require('graceful-fs')
+const makeDir = require('make-dir')
+const writeFile = util.promisify(fs.writeFile)
+const paths = require('./paths')
 
-/* 画像圧縮
- -------------------------------- */
-(async () => {
-  const file = await imagemin([
-    `${paths.srcImg}/*.+(jpg|png|gif|svg)`,
-    `${paths.srcImg}/**/**.+(jpg|png|gif|svg)`,
-    // `!${paths.srcImg}/sprite/**.+(jpg|png|gif|svg)`
-    `!${paths.srcImg}/common/favicon.png`
+const srcdir = paths.srcImg
+const distdir = paths.distImg
+
+imagemin(
+  [
+    paths.srcImg + '/**/*.{jpg,jpeg,png,gif,svg}',
+    srcdir + '/*.{jpg,jpeg,png,gif,svg}'
   ],
-    {
-      destination: 'dist/img',
-      plugins: [
-        pngquant({
-          quality: [0.65, 0.8],
-          speed: 1
-        }),
-        imageminSvgo(),
-        imageminOpting(),
-
+  {
+    plugins: [
+      jpegtran({
+        progressive: true
+      }),
+      pngquant({
+        speed: 4,
+        quality: [0.65, 0.8]
+      }),
+      imageminSvgo(),
+      imageminOpting()
     ]
-  }).catch((e)=> console.log(e))
-  console.log(file)
-})()
+  }
+).then(files =>
+  files.forEach(async v => {
+    let source = path.parse(v.sourcePath)
+    v.destinationPath = `${source.dir.replace(srcdir, distdir)}/${source.name}${
+      source.ext
+    }`
+
+    await makeDir(path.dirname(v.destinationPath))
+    await writeFile(v.destinationPath, v.data)
+  })
+)

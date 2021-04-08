@@ -1,6 +1,14 @@
 {
   "presets": [
-    "@babel/preset-react",
+    [
+        "@babel/preset-react",
+        { 
+            "runtime": "automatic",
+            "importSource": "@emotion/react" 
+        }
+    ],
+    "@babel/preset-typescript",
+    "@emotion/babel-preset-css-prop",
     ["@babel/preset-env", {
       "targets": {
           "ie": 11,
@@ -10,15 +18,20 @@
       "corejs": 3
     }]
   ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-syntax-object-rest-spread"
+    ],
   "env": {
     "development": {
       "plugins": [
-        [
-          "babel-plugin-styled-components", {
+            [
+            "babel-plugin-styled-components", {
             "minify": false
-          },
-          "react-hot-loader/babel"
-        ]
+            },
+        ],
+        "react-hot-loader/babel"
       ]
     }
   }

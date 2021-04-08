@@ -1,8 +1,27 @@
-// 機能を持ったcomponent(=module)はここに
+// 押したら上にスクロールする機能付きのコンポーネント
 
-import React from 'react'
-import { css } from '@emotion/core'
+
 import { animateScroll as scroll } from 'react-scroll'
+
+const ButtonContainer = {
+  position: 'fixed',
+  right: '50px',
+  bottom: '50px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '50px',
+  height: '50px',
+  borderRadius: '50%',
+  background: '#062854',
+  cursor: 'pointer'
+} as const
+
+const ButtonContent = {
+  color: '#ffffff',
+  fontWeight: 'bold',
+  fontSize: '24px'
+} as const
 
 export default function ScrollTop() {
   const scrollToTop = () => {
@@ -16,22 +35,4 @@ export default function ScrollTop() {
   )
 }
 
-const ButtonContainer = css({
-  position: 'fixed',
-  right: '50px',
-  bottom: '50px',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  width: '50px',
-  height: '50px',
-  borderRadius: '50%',
-  background: '#062854',
-  cursor: 'pointer'
-})
 
-const ButtonContent = css({
-  color: '#ffffff',
-  fontWeight: 'bold',
-  fontSize: '24px'
-})

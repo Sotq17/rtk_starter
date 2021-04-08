@@ -29,6 +29,17 @@ $ npm run build
 $npm t
 ```
 
+### モックサーバー立ち上げ
+
+```
+$npm run json-server
+```
+
+5000 ポートで立ち上がり、db.json の値を返す。
+
+ex) localhost:5000/users
+-> {data: [ {id: 1, text: "login success"}], status: 200, statusText: "OK", headers: {…}, config: {…}, …}
+
 ### 構成
 
 react / redux-tool-kit を使用
@@ -89,4 +100,15 @@ reduxjs/toolkit v1.3.6
 
 ### 解説
 
+リポジトリ構成
 https://qiita.com/Sotq_17/items/7c7ab9880597336b3ee5
+
+コンポーネントの使い方等は各コンポーネントの上部に記載
+
+### Emotion v11 の注意
+
+- css 構文使えない
+- ReactFragment の簡易構文使えない
+  https://emotion.sh/docs/typescript
+
+- css の変数は return の前に
