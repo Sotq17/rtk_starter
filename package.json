@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "start": "webpack serve --hot only --mode development",
-    "build": "npm run type-check && npm-run-all -s webpackbuild",
+    "build": "npm-run-all -s webpackbuild",
     "webpackbuild": "webpack --mode production",
     "copyfile": "cp -r dist/img build/img",
     "minimg": "node tasks/minify.js",
