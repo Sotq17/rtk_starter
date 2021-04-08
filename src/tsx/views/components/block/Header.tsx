@@ -1,10 +1,33 @@
-import React from 'react'
-import { HeaderContainer } from '../../../style/components/block/Header'
+import { BrowserRouter as Router, useHistory, Link } from 'react-router-dom'
 
-export default function Header() {
+
+// componets
+import { Button } from '../../components/atoms/Button'
+// store
+import { selectLogin, logout } from '../../../stores/slices/loginSlice'
+// style
+import { HeaderContainer } from '../../../style/components/block/Header'
+import { clrWhite, clrTheme } from '../../../style/variables'
+import { Navigation } from './Navigation'
+
+export const Header = () => {
+  const headerLink = `
+  text-decoration: none;
+  color: inherit;
+`
+
+  const headerWrap = `
+  height: 50px;
+`
+
   return (
-    <div css={HeaderContainer}>
-      <p>Header</p>
+    <div css={headerWrap}>
+      <div css={HeaderContainer}>
+        <Link to="/" css={headerLink}>
+          <p>Header Logo</p>
+        </Link>
+        <Navigation />
+      </div>
     </div>
   )
 }

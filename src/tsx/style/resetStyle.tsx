@@ -1,7 +1,6 @@
-import { css } from '@emotion/core'
 
 // reset-css
-export const reset = css`
+export const reset = `
   /* http://meyerweb.com/eric/tools/css/reset/
    v4.0 | 20180602
    License: none (public domain)

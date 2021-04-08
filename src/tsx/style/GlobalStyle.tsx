@@ -1,24 +1,32 @@
 import * as React from 'react'
-import { Global, css } from '@emotion/core'
-import { textClr } from '../style/variables'
+import { Global, css, jsx } from '@emotion/react'
 import { reset } from './resetStyle'
 
-// grobal-css
-const globalStyle = css`
+// 追加グローバルスタイルは以下に記載
+const globalStyle = `
   ${reset}
   body {
-    color: ${textClr};
+    font-family: sans-serif;
   }
   button {
     outline: none;
+    font-family: sans-serif;
   }
+  input{
+    font-family: sans-serif;
+  }
+  select{
+        font-family: sans-serif;
+        -webkit-appearance: button;
+        appearance: button;
+  }
+
 `
 
-const GlobalStyle: React.FC = ({ children }) => {
+const GlobalStyle: React.FC = () => {
   return (
     <div>
       <Global styles={globalStyle} />
-      {children}
     </div>
   )
 }

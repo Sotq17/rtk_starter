@@ -1,4 +1,4 @@
 console.log('hoge');
-const aaa = () => {
-  console.log('aaa');
+export const aaa = () => {
+  return 'hoge'
 };
