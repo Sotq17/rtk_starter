@@ -5,6 +5,8 @@
 // name: ボタンの文字
 // onClick: click時に走る関数
 
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 import { SpinnerSmall } from './Spinner'
 
@@ -26,7 +28,7 @@ export const Button = (props: ButtonProps) => {
     borderRadius: '4px',
     cursor: 'pointer'
   }
-  const spinnerWrapper = `
+  const spinnerWrapper = css`
     position: absolute;
     top: 33%;
     right: 7%;

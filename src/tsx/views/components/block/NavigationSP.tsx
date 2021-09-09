@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 import { NavigationList } from './NavigationList'
 import { clrTheme } from '../../../style/variables'
@@ -17,7 +19,7 @@ export const NavigationSP = ({ open }: navigationProps) => {
     `
   }
 
-  const menuContainer = `
+  const menuContainer = css`
   background-color: ${clrTheme};
   color: white;
   min-height: calc(100vh - 50px);

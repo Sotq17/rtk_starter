@@ -1,4 +1,4 @@
-
+import React from "react"
 import { useSelector } from 'react-redux'
 import ReactDOM from 'react-dom'
 import {
@@ -52,9 +52,11 @@ ReactDOM.render(
     <GlobalStyle />
     <Router>
       <Switch>
+        <React.Fragment>
         <GuestRoute path="/entry" children={<Entry />} />
         <GuestRoute path="/login" children={<Login />} />
         <PrivateRoute path="/" children={<Top />} />
+        </React.Fragment>
       </Switch>
     </Router>
   </Provider>,

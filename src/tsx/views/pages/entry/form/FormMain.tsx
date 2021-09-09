@@ -1,4 +1,5 @@
-
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 import { useEffect } from 'react'
 import { Controller, useForm } from 'react-hook-form/dist/index.ie11'
 import { useSelector } from 'react-redux'
@@ -14,7 +15,7 @@ export const FormMain = () => {
   const onSubmit = (data: any) => console.log(data)
 
 
-  const formWrap = `
+  const formWrap = css`
     max-width:800px;
     margin:auto;
   `

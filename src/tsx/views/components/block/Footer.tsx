@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { jsx } from '@emotion/react'
 
 import { FooterContainer } from '../../../style/components/block/Footer'
 

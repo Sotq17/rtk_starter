@@ -8,6 +8,8 @@
 // validate：バリデーションの内容。何もなければ{}を入れる。必須/任意タグもこの要素で出し分けている
 // errors：hookformのerrorsオブジェクト
 // * option要素は子要素としてラップする
+/** @jsxImportSource @emotion/react */
+import { jsx } from '@emotion/react'
 
 import { RequiredLabel } from '../../../components/atoms/RequiredLabel'
 import {

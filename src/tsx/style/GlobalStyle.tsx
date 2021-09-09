@@ -3,7 +3,7 @@ import { Global, css, jsx } from '@emotion/react'
 import { reset } from './resetStyle'
 
 // 追加グローバルスタイルは以下に記載
-const globalStyle = `
+const globalStyle = css`
   ${reset}
   body {
     font-family: sans-serif;

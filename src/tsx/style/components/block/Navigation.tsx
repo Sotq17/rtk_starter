@@ -1,7 +1,9 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 //  style
 import { clrWhite, media_pc } from '../../../style/variables'
 
-export const navList = `
+export const navList = css`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -12,7 +14,7 @@ export const navList = `
   }
 `
 
-export const navItem = `
+export const navItem = css`
   border-bottom: 1px solid ${clrWhite};
   display: flex;
   justify-content: center;
@@ -29,7 +31,7 @@ export const navItem = `
   }
 `
 
-export const navItemLink = `
+export const navItemLink = css`
   text-decoration: none;
   color: inherit;
   padding: 20px 0;
@@ -41,7 +43,7 @@ export const navItemLink = `
   }
 `
 
-export const navItemAccordion = `
+export const navItemAccordion = css`
   text-decoration: none;
   color: inherit;
   border-bottom: 1px solid ${clrWhite};
@@ -58,7 +60,7 @@ export const navItemAccordion = `
   }
 `
 
-export const logoutBtnWrap = `
+export const logoutBtnWrap = css`
   display: flex;
   align-items: center;
   padding-bottom: 30px;

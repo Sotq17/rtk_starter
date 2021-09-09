@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 // 画面に固定されるSpinner
 // API通信時など、ユーザーの操作を止めたい場合に使用する
 
@@ -9,7 +11,7 @@ export const FixedSpinner = () => {
   if (!app) {
     return <div />
   }
-  const spinnerOverRay = `
+  const spinnerOverRay = css`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -20,7 +22,7 @@ export const FixedSpinner = () => {
   z-index: 999;
   background-color: rgba(245, 245, 245, 0.5);
 `
-  const spinnerWrap = `
+  const spinnerWrap = css`
   position: absolute;
   top: 50%;
   left: 50%;

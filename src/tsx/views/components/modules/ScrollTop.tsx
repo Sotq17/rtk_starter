@@ -1,5 +1,6 @@
 // 押したら上にスクロールする機能付きのコンポーネント
-
+/** @jsxImportSource @emotion/react */
+import { jsx } from '@emotion/react'
 
 import { animateScroll as scroll } from 'react-scroll'
 

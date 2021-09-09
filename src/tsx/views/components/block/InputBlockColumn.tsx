@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 import { Input } from '../atoms/Input'
 
@@ -9,7 +11,7 @@ interface inputProps {
 }
 
 export const InputBlockColumn = (props: inputProps) => {
-  const inputText = `
+  const inputText = css`
     margin-bottom: 10px;
     font-size: 14px;
   `

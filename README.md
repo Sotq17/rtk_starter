@@ -2,8 +2,8 @@
 
 ## 開発環境
 
-- node v12.13.1
-- npm v6.13.4
+- node v14.15.0
+- npm v6.14.8
 
 ### install
 

@@ -1,29 +1,29 @@
 
 import { clrBlue, clrWhite, clrDarkGray } from '../../../style/variables'
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 type LabelProps = {
   type: number
 }
 
 export const RequiredLabel = ({ type }: LabelProps) => {
-  const titleLabel = `
-
+  const titleLabel = css`
   font-size:12px;
-  padding 5px;
+  padding: 5px;
   border-radius:2px;
   `
   let labelType
   if (type === 1) {
-    labelType = `
+    labelType = css`
       background-color:${clrBlue};
       color:${clrWhite};
     `
   } else if (type === 2) {
-    labelType = `
+    labelType = css`
       background-color:${clrWhite};
       color:${clrDarkGray};
       border: 1px solid ${clrDarkGray};
-      // font-weight:bold;
     `
   }
 

@@ -1,7 +1,8 @@
-
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 export const Select = ({ register, options, name, ...rest }: any) => {
-  const inputStyle = `
+  const inputStyle = css`
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;

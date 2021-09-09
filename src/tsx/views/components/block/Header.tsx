@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, useHistory, Link } from 'react-router-dom'
-
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 // componets
 import { Button } from '../../components/atoms/Button'
@@ -11,14 +12,14 @@ import { clrWhite, clrTheme } from '../../../style/variables'
 import { Navigation } from './Navigation'
 
 export const Header = () => {
-  const headerLink = `
-  text-decoration: none;
-  color: inherit;
-`
+  const headerLink = css`
+    text-decoration: none;
+    color: inherit;
+  `
 
-  const headerWrap = `
-  height: 50px;
-`
+    const headerWrap = css`
+    height: 50px;
+  `
 
   return (
     <div css={headerWrap}>

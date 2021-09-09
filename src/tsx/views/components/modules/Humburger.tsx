@@ -2,6 +2,8 @@
 // useStateと、出てくる要素と一緒に使用する
 // ex)Navigation.tsx
 // 出てくる要素 → NavigationSP
+/** @jsxImportSource @emotion/react */
+import { jsx } from '@emotion/react'
 
 import { hamburger } from '../../../style/components/modules/Humburger'
 import { Navigation } from '../block/Navigation'

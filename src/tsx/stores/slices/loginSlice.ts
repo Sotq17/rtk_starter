@@ -15,7 +15,7 @@ export const fetchAsyncLogin = createAsyncThunk(
     const url = `${apiURL}/login`
     const params = {
       username: username,
-      passWord: password
+      password: password
     }
     const result = await axios(url, {
       method: 'POST',

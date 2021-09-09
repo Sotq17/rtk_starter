@@ -2,6 +2,8 @@
 // 画面全体に固定されるモーダル
 // useModalと一緒に使用する
 // ex) pages/top/Top.tsx
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 import {
   media_pc,
@@ -24,7 +26,7 @@ export const FixedModal = ({
   if (!app) {
     return <div />
   }
-  const spinnerOverRay = `
+  const spinnerOverRay = css`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -34,44 +36,38 @@ export const FixedModal = ({
   width: 100vw;
   z-index: 999;
   background-color: rgba(245, 245, 245, 0.5);
-  // ${media_pc} {
-  //   width: calc(100vw - 250px);
-  // }
 `
-  const spinnerWrap = `
+  const spinnerWrap = css`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 `
-  const errorModal = `
+  const errorModal = css`
   width: 300px;
   padding: 30px;
-  // min-height:300px;
   background-color:${clrWhite};
   border: 3px solid ${clrTheme};
   border-radius:6px;
   `
-  const errorModalTxtContainer = `
+  const errorModalTxtContainer = css`
   display:flex;
   justify-content:center;
-  margin-bottom: 50px
+  margin-bottom: 50px;
   `
-  const errorModalTxt = `
+  const errorModalTxt = css`
     width: 100%;
     line-height: 1.8;
     word-wrap: break-word;
     white-space: pre-wrap;
   `
-  const errorModalButtons = `
+  const errorModalButtons = css`
   display: flex;
   justify-content:space-between;
   `
 
-  const errorModalButtonWrap = `
-
-  width: 47%
-
+  const errorModalButtonWrap = css`
+  width: 47%;
   `
 
   return createPortal(

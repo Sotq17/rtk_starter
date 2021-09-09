@@ -1,4 +1,6 @@
 import { Fragment } from 'react'
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 // pagenationの形を変更
 export const PaginationContent = ({
@@ -24,10 +26,10 @@ export const PaginationContent = ({
     nextFlag = true
   }
 
-  const paginationList = `
+  const paginationList = css`
   display: flex;
 `
-  const paginationItem = `
+  const paginationItem = css`
   outline: none;
   border: none;
   background: #ffffff;
@@ -43,10 +45,10 @@ export const PaginationContent = ({
   color: #53565f;
 `
 
-  const noCursor = `
+  const noCursor = css`
   cursor: auto;
 `
-  const currentPageItem = `
+  const currentPageItem = css`
   background: #53565f;
   color: #ffffff;
 `

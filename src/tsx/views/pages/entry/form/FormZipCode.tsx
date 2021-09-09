@@ -13,6 +13,9 @@
 // 住所検索でAPIが走り、結果をStoreに保持する
 // ex) FormMain.tsx
 
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
+
 import { RequiredLabel } from '../../../components/atoms/RequiredLabel'
 import {
   formItemWrap,
@@ -56,7 +59,7 @@ export const FormZipCode = (props: FormInputProps) => {
       : 'エラーが発生しました'
     : ''
 
-  const formInputZipSearch =`
+  const formInputZipSearch = css`
   font-size: 16px;
   height: 100%;
   width: 48%;

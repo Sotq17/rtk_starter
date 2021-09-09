@@ -1,7 +1,8 @@
-
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 export const Spinner = () => {
-  const spinner = `
+  const spinner = css`
   width: 50px;
   height: 50px;
   border: 10px solid #dddddd;
@@ -21,7 +22,7 @@ export const Spinner = () => {
 }
 
 export const SpinnerSmall = () => {
-  const spinnerSmall = `
+  const spinnerSmall = css`
   width: 8px;
   height: 8px;
   border: 4px solid #dddddd;

@@ -1,6 +1,8 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 
 // reset-css
-export const reset = `
+export const reset = css`
   /* http://meyerweb.com/eric/tools/css/reset/
    v4.0 | 20180602
    License: none (public domain)

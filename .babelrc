@@ -1,18 +1,17 @@
 {
   "presets": [
     [
-        "@babel/preset-react",
-        { 
-            "runtime": "automatic",
-            "importSource": "@emotion/react" 
-        }
+      "@babel/preset-react",
+      {
+          "runtime": "automatic"
+      }
     ],
     "@babel/preset-typescript",
-    "@emotion/babel-preset-css-prop",
     ["@babel/preset-env", {
       "targets": {
           "ie": 11,
-          "safari": 9
+          "safari": 9,
+          "node": true
       },
       "useBuiltIns": "usage",
       "corejs": 3
@@ -26,11 +25,6 @@
   "env": {
     "development": {
       "plugins": [
-            [
-            "babel-plugin-styled-components", {
-            "minify": false
-            },
-        ],
         "react-hot-loader/babel"
       ]
     }

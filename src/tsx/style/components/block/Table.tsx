@@ -1,16 +1,18 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 // style
 import { clrWhite, media_sp, media_pc } from '../../../style/variables'
 
-export const listContainer = `
+export const listContainer = css`
   background: #ffffff;
 `
 
-export const title = `
+export const title = css`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 24px;
 `
-export const tableContainer = `
+export const tableContainer = css`
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
@@ -18,7 +20,7 @@ export const tableContainer = `
     border: solid 0.5px #dddddd;
   }
 `
-export const tableItem = `
+export const tableItem = css`
   height: 50px;
   display: flex;
   align-items: center;
@@ -30,7 +32,7 @@ export const tableItem = `
   }
 `
 
-export const tableItemTitle = `
+export const tableItemTitle = css`
   ${media_sp} {
     display: flex;
     align-items: center;
@@ -39,7 +41,7 @@ export const tableItemTitle = `
     border: solid 0.5px #dddddd;
   }
 `
-export const tableItemContent = `
+export const tableItemContent = css`
   ${media_sp} {
     display: flex;
     align-items: center;
@@ -49,7 +51,7 @@ export const tableItemContent = `
   }
 `
 
-export const tableList = `
+export const tableList = css`
   display: flex;
   flex-direction: column;
   border: solid 0.5px #dddddd;
@@ -62,7 +64,7 @@ export const tableList = `
   }
 `
 
-export const tableListTop = `
+export const tableListTop = css`
   background-color: #fafafa;
   font-weight: bold;
   display: none;
@@ -71,7 +73,7 @@ export const tableListTop = `
   }
 `
 
-export const tableSelect = `
+export const tableSelect = css`
   height: 100%;
   // width: 100%;
   border: none;

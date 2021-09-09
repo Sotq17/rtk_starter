@@ -1,4 +1,5 @@
-
+/** @jsxImportSource @emotion/react */
+import { jsx } from '@emotion/react'
 
 // components
 import { FixedSpinner } from '../../components/block/FixedSpinner'

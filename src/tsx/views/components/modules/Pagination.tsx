@@ -5,7 +5,8 @@
 // paginate: pagination関数
 // currentPage: 現在のページ番号
 // type: ページネーションのタイプ
-
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 import { PaginationContent } from './PaginationContent'
 import { Arrow } from '../atoms/Arrow'
@@ -23,10 +24,10 @@ export const Pagination = ({
   }
   const lastPageNumber = pageNumber[pageNumber.length - 1]
 
-  const paginationList = `
+  const paginationList = css`
   display: flex;
 `
-  const paginationItem = `
+  const paginationItem = css`
   outline: none;
   border: none;
   background: #ffffff;

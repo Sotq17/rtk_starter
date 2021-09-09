@@ -1,4 +1,5 @@
-
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 import { ConnectForm } from '../modules/ConnectForm'
 
 interface inputProps {
@@ -11,7 +12,7 @@ interface inputProps {
 }
 
 export const Input = (props: inputProps) => {
-  const inputStyle = `
+  const inputStyle = css`
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;

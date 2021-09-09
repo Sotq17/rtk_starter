@@ -1,4 +1,7 @@
-export const arrowUp = `
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
+
+export const arrowUp = css`
   border-top: solid 1px #53565f;
   border-left: solid 1px #53565f;
   width: 7px;
@@ -6,7 +9,7 @@ export const arrowUp = `
   transform: rotate(45deg);
   cursor: pointer;
 `
-export const arrowDown = `
+export const arrowDown = css`
   border-bottom: solid 1px #53565f;
   border-right: solid 1px #53565f;
   width: 7px;
@@ -14,7 +17,7 @@ export const arrowDown = `
   transform: rotate(45deg);
   cursor: pointer;
 `
-export const arrowRight = `
+export const arrowRight = css`
   border-top: solid 1px #53565f;
   border-right: solid 1px #53565f;
   width: 6px;
@@ -23,7 +26,7 @@ export const arrowRight = `
   margin-right: 7px;
   cursor: pointer;
 `
-export const arrowLeft = `
+export const arrowLeft = css`
   border-bottom: solid 1px #53565f;
   border-left: solid 1px #53565f;
   width: 6px;
@@ -33,7 +36,7 @@ export const arrowLeft = `
   cursor: pointer;
 `
 
-export const arrowUpSmall = `
+export const arrowUpSmall = css`
   border-top: solid 1px #53565f;
   border-left: solid 1px #53565f;
   width: 4px;
@@ -41,7 +44,7 @@ export const arrowUpSmall = `
   transform: rotate(45deg);
   cursor: pointer;
 `
-export const arrowDownSmall = `
+export const arrowDownSmall = css`
   border-bottom: solid 1px #53565f;
   border-right: solid 1px #53565f;
   width: 4px;
@@ -49,7 +52,7 @@ export const arrowDownSmall = `
   transform: rotate(45deg);
   cursor: pointer;
 `
-export const arrowRightSmall = `
+export const arrowRightSmall = css`
   border-top: solid 1px #53565f;
   border-right: solid 1px #53565f;
   width: 4px;
@@ -58,7 +61,7 @@ export const arrowRightSmall = `
   margin-right: 7px;
   cursor: pointer;
 `
-export const arrowLeftSmall = `
+export const arrowLeftSmall = css`
   border-bottom: solid 1px #53565f;
   border-left: solid 1px #53565f;
   width: 4px;

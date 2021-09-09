@@ -4,6 +4,8 @@
 // loading: loadingをボタン内に入れたい場合にtrue/falseで入れる
 // name: ボタンの文字
 // onClick: click時に走る関数
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 import { SpinnerSmall } from './Spinner'
 
@@ -25,7 +27,7 @@ export const ButtonRound = (props: ButtonProps) => {
     cursor: 'pointer'
   }
 
-  const spinnerWrapper = `
+  const spinnerWrapper = css`
     position: absolute;
     top: 30%;
     right: 7%;

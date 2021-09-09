@@ -1,3 +1,6 @@
+/** @jsxImportSource @emotion/react */
+import { jsx } from '@emotion/react'
+
 import { Fragment } from 'react'
 
 import { BrowserRouter as Router, useHistory, Link } from 'react-router-dom'

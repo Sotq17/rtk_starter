@@ -1,16 +1,19 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
+
 import { media_pc, clrDarkGray, clrLightGray, clrError } from '../variables'
 
-export const formItemWrap = `
+export const formItemWrap = css`
     margin-top:40px;
     margin-bottom:40px;
   `
-export const formItemContainer = `
+export const formItemContainer = css`
   ${media_pc}{
     display: flex;
     align-items: baseline;
   }
   `
-export const formItemTitleContainer = `
+export const formItemTitleContainer = css`
     display: flex;
     align-items: center;
     margin-bottom: 15px;
@@ -19,10 +22,10 @@ export const formItemTitleContainer = `
       margin-bottom: 0px;
     }
   `
-export const formItemTitle = `
+export const formItemTitle = css`
     font-weight:bold;
   `
-export const formItemContentContainer = `
+export const formItemContentContainer = css`
     display:flex;
     flex-direction:column;
     ${media_pc}{
@@ -30,19 +33,19 @@ export const formItemContentContainer = `
     }
   `
 
-export const formItemContentWrap = `
+export const formItemContentWrap = css`
   display:flex;
   flex-direction:column;
   width:60%;
 `
-export const formItemContentContainerRows = `
+export const formItemContentContainerRows = css`
     display:flex;
     justify-content:space-between;
     ${media_pc}{
       width:100%;
     }
 `
-export const formItemContent = `
+export const formItemContent = css`
     font-size:16px;
     margin-bottom: 5px;
     width: calc(100% - 26px);
@@ -53,7 +56,7 @@ export const formItemContent = `
 
 
   `
-  export const formItemContentDate= `
+  export const formItemContentDate= css`
     width: 100%;
     position:relative;
     .react-datepicker-wrapper{
@@ -70,7 +73,7 @@ export const formItemContent = `
     }
   `
 
-export const formItemContentSmall = `
+export const formItemContentSmall = css`
   font-size:16px;
   margin-bottom: 5px;
   width: calc(48% - 26px);
@@ -81,7 +84,7 @@ export const formItemContentSmall = `
 `
 
 
-export const formItemSelect = `
+export const formItemSelect = css`
     font-size:16px;
     margin-bottom: 5px;
     width: 100%;
@@ -102,16 +105,16 @@ export const formItemSelect = `
     }
   `
 
-export const formItemError = `
+export const formItemError = css`
     margin-top: 5px;
     color:${clrError}
   `
 
-export const formLabelWrap = `
+export const formLabelWrap = css`
   margin-right: 10px;
   `
 
-export const formSelectWrap = `
+export const formSelectWrap = css`
   position:relative;
     &:after{
     pointer-events: none;

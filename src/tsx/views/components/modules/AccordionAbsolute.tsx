@@ -1,5 +1,8 @@
 // 親要素外に広がるアコーディオン
 // ex)PC時のナビゲーション内
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
+
 
 import { useState, useRef } from 'react'
 import { clrTheme, media_pc } from '../../../style/variables'
@@ -15,7 +18,7 @@ export const AccordionAbsolute = (props: any) => {
   }
 
   const accordionContent = setActive
-    ? `
+    ? css`
         overflow: auto;
         transition: max-height 0.3s ease;
         max-height: ${setHeight};
@@ -24,7 +27,7 @@ export const AccordionAbsolute = (props: any) => {
         background: ${clrTheme};
         display: block;
       `
-    : `
+    : css`
         overflow: auto;
         transition: max-height 0.3s ease;
         max-height: ${setHeight};
@@ -32,20 +35,20 @@ export const AccordionAbsolute = (props: any) => {
       `
 
   const rotate = setActive
-    ? `
+    ? css`
         // margin-top: 5px;
       `
-    : `
+    : css`
         margin-bottom: 5px;
         transform: rotate(135deg);
       `
 
-  const accordion__section = `
+  const accordion__section = css`
   display: flex;
   flex-direction: column;
 `
 
-  const accordion = `
+  const accordion = css`
   color: #dddddd;
   cursor: pointer;
   height: 38px;
@@ -62,7 +65,7 @@ export const AccordionAbsolute = (props: any) => {
   }
 `
 
-  const accordion__arrow = `
+  const accordion__arrow = css`
   width: 7px;
   height: 7px;
   border: 2px solid;

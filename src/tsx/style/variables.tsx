@@ -1,3 +1,6 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
+
 // color
 export const clrTheme = '#062854'
 export const clrLink = '#419bf0'
@@ -19,13 +22,13 @@ export const media_sp = '@media (max-width: 768px)'
 export const media_pc = '@media (min-width: 768px)'
 export const media_pc_l = '@media (min-width: 1180px)'
 
-export const only_pc = `
+export const only_pc = css`
 display:none;
 ${media_pc}{
   display:block;
 }
 `
-export const only_sp = `
+export const only_sp = css`
 display:block;
 ${media_pc}{
   display:none

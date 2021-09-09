@@ -7,7 +7,8 @@
 // name：各inputのname。Submit時にこのnameで値を取得できる。（ex. data.LastNameなど）
 // validate：バリデーションの内容。何もなければ{}を入れる。必須/任意タグもこの要素で出し分けている
 // errors：hookformのerrorsオブジェクト
-
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 import { RequiredLabel } from '../../../components/atoms/RequiredLabel'
 import {
@@ -52,7 +53,7 @@ export const FormInputDate = (props: FormInputProps) => {
       ? errors[name].message
       : 'エラーが発生しました'
     : ''
-    const calendarIcon = `
+    const calendarIcon = css`
     width: 25px;
     height: 25px;
     position: absolute;

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
-
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 // componets
 import { Button } from '../../components/atoms/Button'
@@ -15,13 +16,13 @@ export const Navigation = () => {
   // ハンバーガーメニューstate管理
   const [open, setOpen] = useState(false)
 
-  const navContainer = `
+  const navContainer = css`
   display: none;
   ${media_pc} {
     display: flex;
   }
 `
-  const HumburgerWrap = `
+  const HumburgerWrap = css`
   display: block;
   ${media_pc} {
     display: none;

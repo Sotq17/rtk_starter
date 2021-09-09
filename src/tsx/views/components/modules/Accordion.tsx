@@ -1,5 +1,7 @@
 // 親要素内に収まるアコーディオン
 // ex)SP時のナビゲーション（ハンバーガーメニュー内）
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 import { useState, useRef } from 'react'
 import { media_pc } from '../../../style/variables'
@@ -15,25 +17,25 @@ export const Accordion = (props: any) => {
   }
 
   const accordionContent = setActive
-    ? `
+    ? css`
         overflow: auto;
         transition: max-height 0.3s ease;
         max-height: ${setHeight};
       `
-    : `
+    : css`
         overflow: auto;
         transition: max-height 0.3s ease;
         max-height: ${setHeight};
       `
 
   const rotate = setActive
-    ? ``
-    : `
+    ? css``
+    : css`
         margin-bottom: 5px;
         transform: rotate(135deg);
       `
 
-  const accordion = `
+  const accordion = css`
   color: #dddddd;
   cursor: pointer;
   display: flex;
@@ -50,7 +52,7 @@ export const Accordion = (props: any) => {
   }
 `
 
-  const accordion__arrow = `
+  const accordion__arrow = css`
   width: 7px;
   height: 7px;
   border: 2px solid;
@@ -78,7 +80,7 @@ export const Accordion = (props: any) => {
   )
 }
 
-const accordion__section = `
+const accordion__section = css`
   display: flex;
   flex-direction: column;
   width: 100%;

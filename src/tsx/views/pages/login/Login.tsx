@@ -1,4 +1,5 @@
-
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
 
 // store
 import { hot } from 'react-hot-loader'
@@ -8,14 +9,14 @@ import { clrBack } from '../../../style/variables'
 import { LoginForm } from './LoginForm'
 
 const Login = () => {
-  const loginFormWrap = `
+  const loginFormWrap = css`
   background-color: ${clrBack};
   min-width: 100vw;
   min-height: 100vh;
   position: relative;
 `
 
-  const loginFormContainer = `
+  const loginFormContainer = css`
   position: absolute;
   top: 50%;
   left: 50%;
