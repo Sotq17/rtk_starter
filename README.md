@@ -104,11 +104,3 @@ reduxjs/toolkit v1.3.6
 https://qiita.com/Sotq_17/items/7c7ab9880597336b3ee5
 
 コンポーネントの使い方等は各コンポーネントの上部に記載
-
-### Emotion v11 の注意
-
-- css 構文使えない
-- ReactFragment の簡易構文使えない
-  https://emotion.sh/docs/typescript
-
-- css の変数は return の前に
